@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<head>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        #resultTable {
+            border-collapse: collapse;
+        }
+
+        .resultCell {
+            border : 1px solid black;
+            text-align : center;
+            padding : 2px;
+        }
+
+        .rowLabel {
+            font-size : 8pt;
+            min-width : 120px;
+            font-weight : bold;
+            background-color : #aaa;
+            padding : 6px 4px 6px 2px;
+            text-align : right;
+        }
+
+        .colHeading {
+            background-color : #aaa;
+            font-size : 10pt;
+            padding : 4px 6px 4px 6px;
+            font-weight : bold;
+            text-align : center;
+        }
+
+        .flag {
+            background-color : #aaa;
+            border-bottom : 1px solid black;
+        }
+        
+        .inactiveMode {
+            color : #aaa;
+            font-style: italic;
+        }
+
+        .fixedGui {
+            position : fixed;
+            background-color: white;
+            width : 100%;
+            box-shadow: 3px 3px 5px;
+            padding : 2px;
+        }
+
+        .vertSpacer {
+            min-height : 30px;
+        }
+
+        .roiInput {
+            width : 50px;
+        }
+
+        .timeInput {
+            width : 80px;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    
+    <div class = "fixedGui">
+        Exposure Time, sec:
+        <input id = "exposureTimeSec" value = "0.010" class = "timeInput"> ,
+        ROI Columns
+        <input id = "roiColumns" value = "-" class = "roiInput">,
+        ROI Rows
+        <input id = "roiRows" value = "-" class = "roiInput">,
+
+                Bit Depth
+        <select name="bitDepth" id="bitDepth">
+            <option value="12">12 Bit</option>
+            <option value="16">16 Bit</option>
+          </select>,
+
+          Use Min. Exposure
+          <input type="checkbox" id = "minExpCheckBox"> 
+            </select>
+          
+
+    </div>
+    <div class = "vertSpacer"> </div>
+
+    <table id = "resultTable">
+        <tr>
+            <th class = "flag" colspan="5">
+                Frames Per Second (FPS) for Various Acquisition Modes
+            </th>
+        </tr>
+    </table>
+
+sCMOS Timings v0.02 - Adam Wise - 2022
+</body>
+
+<script src = "js/d3.min.js"></script>
+<script src = "js/timingInfo.js"></script>
+<script src = "js/cameraInfo.js"></script>
+<script src = "js/sonaCalc.js"></script>
