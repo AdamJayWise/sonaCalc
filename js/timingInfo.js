@@ -4,6 +4,17 @@
 var timingModes = {
     'sona6' : {
 
+    rollingShutterInternalTriggeringOverlapShort : {
+        longName : "Rolling Shutter, Internal Trigger (Overlap Mode)",
+        shortName : "Rolling, Internal, Overlap",
+        exposureMin : "4row",
+        exposureMax : "600sec",
+        cycleTimeMin : "1frame + 2row",
+        cycleTimeFloor : "1frame + 2row",
+        startDelay : "1row", //?
+        shutterMode : "rolling"
+    },
+
     rollingShutterInternalTriggeringNoOverlap : {
         longName : "Rolling Shutter, Internal Trigger, (No Overlap)",
         shortName : "Rolling, Internal, No Overlap",
@@ -15,29 +26,40 @@ var timingModes = {
         shutterMode : "rolling"
     },
 
-    rollingShutterInternalTriggeringOverlapShort : {
-        longName : "Rolling Shutter, Internal Trigger, (Overlap Mode, Short Exposures)",
-        shortName : "Rolling, Internal, Overlap",
-        exposureMin : "4row",
-        exposureMax : "600sec",
-        cycleTimeMin : "1frame + 2row",
-        cycleTimeFloor : "1frame + 2row",
-        startDelay : "1row", //?
-        shutterMode : "rolling"
-    },
-
     rollingShutterExternalTriggeringNoOverlap : {
-        longName : "Rolling Shutter, External Trigger, (Non-Overlap)",
+        longName : "Rolling Shutter, External Trigger, (No Overlap)",
         shortName : "Rolling, External, Non-Overlap",
         exposureMin : "4row",
         exposureMax : "600sec",
         cycleTimeMin : "1exp + 1frame + 2row",
         startDelay : "1row", //?
         shutterMode : "rolling"
+    },
+
+    rollingShutterExternalExposure : {
+        longName : "Rolling Shutter, External Exposure Triggering",
+        shortName : "Rolling, External Exposure",
+        exposureMin : "4row",
+        exposureMax : "600sec",
+        cycleTimeMin : "1exp + 1frame + 1row",
+        startDelay : "1row", //?
+        shutterMode : "rolling"
     }
 },
 
     'sona11' :{
+
+            
+        rollingShutterInternalTriggeringOverlapShort : {
+            longName : "Rolling Shutter, Internal Trigger (Overlap Mode)",
+            shortName : "Rolling, Internal, Overlap",
+            exposureMin : "1row",
+            exposureMax : "30sec",
+            cycleTimeMin : "1frame + 1row   ",
+            cycleTimeFloor : "1exposure + 1row",
+            startDelay : "1row", //?
+            shutterMode : "rolling"
+        },
     
         rollingShutterInternalTriggeringNoOverlap : {
             longName : "Rolling Shutter, Internal Trigger, (No Overlap)",
@@ -50,17 +72,6 @@ var timingModes = {
             startDelay : "1row", //?
             shutterMode : "rolling"
         },
-    
-        rollingShutterInternalTriggeringOverlapShort : {
-            longName : "Rolling Shutter, Internal Trigger, (Overlap Mode, Short Exposures)",
-            shortName : "Rolling, Internal, Overlap",
-            exposureMin : "1row",
-            exposureMax : "30sec",
-            cycleTimeMin : "1frame + 1row   ",
-            cycleTimeFloor : "1exposure + 1row",
-            startDelay : "1row", //?
-            shutterMode : "rolling"
-        },
 
         rollingShutterExternalTriggeringNoOverlap : {
             longName : "Rolling Shutter, External Trigger, (Non-Overlap)",
@@ -69,6 +80,16 @@ var timingModes = {
             exposureMax : "30sec",
             cycleTimeMin : "1frame + 1row",
             cycleTimeFloor : "1exposure + 1row",
+            startDelay : "1row", //?
+            shutterMode : "rolling"
+        },
+
+        rollingShutterExternalExposure : {
+            longName : "Rolling Shutter, External Exposure Triggering",
+            shortName : "Rolling, External Exposure",
+            exposureMin : "3row",
+            exposureMax : "30sec",
+            cycleTimeMin : "1exp + 1frame + 1row",
             startDelay : "1row", //?
             shutterMode : "rolling"
         }

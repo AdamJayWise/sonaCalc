@@ -49,15 +49,14 @@
         }
 
         .fixedGui {
-            position : fixed;
+            
             background-color: white;
-            width : 100%;
-            box-shadow: 3px 3px 5px;
+            width : 50%;
             padding : 2px;
         }
 
         .vertSpacer {
-            min-height : 30px;
+            min-height : 15px;
         }
 
         .roiInput {
@@ -74,6 +73,19 @@
 </head>
 <body>
     
+    
+
+
+    <table id = "resultTable">
+        <tr>
+            <th class = "flag" colspan="5">
+                Framerate (FPS) for Various Acquisition Modes
+            </th>
+        </tr>
+    </table>
+
+    <div class = "vertSpacer"> </div>
+
     <div class = "fixedGui">
         Exposure Time, sec:
         <input id = "exposureTimeSec" value = "0.010" class = "timeInput"> ,
@@ -94,17 +106,10 @@
           
 
     </div>
+
     <div class = "vertSpacer"> </div>
 
-    <table id = "resultTable">
-        <tr>
-            <th class = "flag" colspan="5">
-                Framerate (FPS) for Various Acquisition Modes
-            </th>
-        </tr>
-    </table>
-
-sCMOS Timings v0.02 - Adam Wise - 2022
+Sona sCMOS Timings v0.0.3 - Adam Wise - 2022
 </body>
 
 <script src = "js/d3.min.js"></script>
